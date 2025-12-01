@@ -1,0 +1,23 @@
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(135deg, #f7f4ec 0%, #f0e8d8 100%);
+  padding: 4rem 0;
+
+  .hero__content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    align-items: center;
+  }
+
+  .hero__text {
+    max-width: 640px;
+  }
+
+  .hero__card {
+    background-color: #fff;
+    border: none;
+  }
+}
