@@ -1,0 +1,37 @@
+<section class="hero">
+  <div class="hero__content container">
+    <div class="hero__text">
+      <p class="text-uppercase fw-semibold text-secondary mb-2">Cuotario</p>
+      <h1 class="display-5 fw-bold mb-3">Panel Angular listo para tu API</h1>
+      <p class="lead mb-4">
+        El tema Sandstone de Bootswatch se aplica por defecto. Configuramos la base de la API en
+        <strong>{{ apiBaseUrl }}</strong> para comenzar a consumir tus endpoints.
+      </p>
+      <div class="d-flex gap-3 flex-wrap align-items-center">
+        <button class="btn btn-primary" type="button" (click)="pingApi()" [disabled]="isLoading">
+          {{ isLoading ? 'Consultando...' : 'Probar conexión' }}
+        </button>
+        <span class="text-muted" aria-live="polite">{{ statusMessage }}</span>
+      </div>
+    </div>
+    <div class="hero__card card shadow-sm">
+      <div class="card-body">
+        <h2 class="h5 fw-bold mb-3">Detalles de conexión</h2>
+        <ul class="list-unstyled mb-0">
+          <li class="mb-2">
+            <span class="fw-semibold">Base URL:</span>
+            <span>{{ apiBaseUrl }}</span>
+          </li>
+          <li class="mb-2">
+            <span class="fw-semibold">Modo:</span>
+            <span>Desarrollo</span>
+          </li>
+          <li>
+            <span class="fw-semibold">Estado:</span>
+            <span>{{ statusMessage }}</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
